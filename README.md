@@ -12,7 +12,7 @@ AuthSch Java API
 - You need to have an auth.sch account.
 - Register a new application.
 - Include the api to your project
-- Note tthat this project is depends on gson library:
+- Note that this project is depends on gson library:
 
 ```XML
     <dependency>
