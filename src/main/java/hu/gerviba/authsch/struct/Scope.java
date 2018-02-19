@@ -47,6 +47,7 @@ public enum Scope {
      * visszatérésre az ezt tartalmazó engedélykérés), csak indokolt esetben, központi 
      * engedélyezés után használható (ehhez adj fel egy ticketet a support.sch.bme.hu 
      * oldalon, amelyben leírod hogy mihez és miért van rá szükséged.
+     * @warning Külön engedélyeztetni kell.
      */
     NEPTUN_CODE("niifPersonOrgID"),
     /**

@@ -23,6 +23,7 @@ import java.util.UUID;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -201,10 +202,10 @@ public class AuthSchAPI implements Serializable {
     
     @SuppressWarnings("deprecation")
     ProfileDataResponse mapProfileDataResponse(String rawJson) {
-        JsonParser jsonParser = new JsonParser();
+        Gson gson = new Gson();
         
         try {
-            JsonObject obj = jsonParser.parse(rawJson).getAsJsonObject();
+            JsonObject obj = gson.fromJson(rawJson, JsonElement.class).getAsJsonObject();
             ProfileDataResponseBuilder response = ProfileDataResponse.newBuilder();
             
             response.setInternalId(UUID.fromString(obj.get("internal_id").getAsString()));
@@ -372,10 +373,10 @@ public class AuthSchAPI implements Serializable {
     }
     
     AuthResponse mapAuthResponse(String rawJson) {
-        JsonParser jsonParser = new JsonParser();
+        Gson gson = new Gson();
         
         try {
-            JsonObject obj = jsonParser.parse(rawJson).getAsJsonObject();
+            JsonObject obj = gson.fromJson(rawJson, JsonElement.class).getAsJsonObject();
             return new AuthResponse(
                     obj.get("access_token").getAsString(), 
                     obj.get("expires_in").getAsLong(), 
@@ -388,10 +389,10 @@ public class AuthSchAPI implements Serializable {
     }
     
     AuthResponse mapAuthResponse(String rawJson, String parameters) {
-        JsonParser jsonParser = new JsonParser();
+        Gson gson = new Gson();
         
         try {
-            JsonObject obj = jsonParser.parse(rawJson).getAsJsonObject();
+            JsonObject obj = gson.fromJson(rawJson, JsonElement.class).getAsJsonObject();
             return new AuthResponse(
                     obj.get("access_token").getAsString(), 
                     obj.get("expires_in").getAsLong(), 

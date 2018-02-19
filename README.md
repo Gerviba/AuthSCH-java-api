@@ -2,7 +2,7 @@ AuthSch Java API
 ===
 
 ![Coverage: 80.3%](https://img.shields.io/badge/coverage-80.3%25-green.svg)
-![Version: 1.0.0-RELEASE](https://img.shields.io/badge/version-1.0.0--RELEASE-blue.svg)
+![Version: 1.0.0-RELEASE](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![BEER-WARE](https://img.shields.io/badge/license-BEER--WARE-yellow.svg)
 
 ## Usage
@@ -12,17 +12,9 @@ AuthSch Java API
 - You need to have an auth.sch account.
 - Register a new application.
 - Include the api to your project
-- Note that this project is depends on gson library:
+- Note that this project is depends on gson 2.6.2 library.
 
-```XML
-    <dependency>
-        <groupId>com.google.code.gson</groupId>
-        <artifactId>gson</artifactId>
-        <version>2.8.2</version>
-    </dependency>
-```
-
-If you're using a web container, you might need to put a [gson-2.8.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/) into the `WEB-INF/lib` folder.
+If you're using a web container, you might need to put a [gson-2.6.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/) into the `WEB-INF/lib` folder.
 
 ### Initialize
 
@@ -63,9 +55,29 @@ It will return a new AuthRespone instance.
     ProfileDataResponse profile = api.getProfile(accessToken);
 ```
 
-## Maven shade
+## Maven 
 
-TODO
+### Compiled JAR
+
+pom.xml
+
+```XML
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.6.2</version>
+    </dependency>
+    <dependency>
+        <groupId>hu.sch</groupId>
+        <artifactId>authsch</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/authsch-1.0.0.jar</systemPath>
+    </dependency>
+```
+
+You need to put the `authsch-x.x.x.jar` (and maybe the `gson-2.6.2.jat`) into the `WEB-INF/lib` folder.
+
 
 ## List of projects
 
