@@ -22,7 +22,7 @@ AuthSch Java API
     </dependency>
 ```
 
-If you're using a web container, you might need to put a [gson-2.8.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/) into the `WEB_INF/lib` folder.
+If you're using a web container, you might need to put a [gson-2.8.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/) into the `WEB-INF/lib` folder.
 
 ### Initialize
 
