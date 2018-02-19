@@ -194,7 +194,7 @@ public class AuthSchAPI implements Serializable {
         con.setRequestProperty("User-Agent", System.getProperty("authsch.useragent", "AuthSchJavaAPI"));
         con.setRequestProperty("Accept", "application/json");
         con.setRequestProperty("Authorization", "Basic " + Base64.getEncoder()
-        .encodeToString((clientIdentifier + ":" + clientKey).getBytes()));
+                .encodeToString((clientIdentifier + ":" + clientKey).getBytes()));
         
         con.setDoOutput(true);
     }

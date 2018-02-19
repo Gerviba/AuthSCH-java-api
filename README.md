@@ -1,6 +1,10 @@
 AuthSch Java API
 ===
 
+![Coverage: 80.3%](https://img.shields.io/badge/coverage-80.3%25-green.svg)
+![Version: 1.0.0-RELEASE](https://img.shields.io/badge/version-1.0.0--RELEASE-blue.svg)
+![BEER-WARE](https://img.shields.io/badge/license-BEER--WARE-yellow.svg)
+
 ## Usage
 
 ### Getting started
