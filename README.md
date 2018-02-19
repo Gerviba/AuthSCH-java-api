@@ -14,9 +14,11 @@ AuthSch Java API
     <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
-        <version>2.8.0</version>
+        <version>2.8.2</version>
     </dependency>
 ```
+
+If you're using a web container, you might need to put a [gson-2.8.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/) into the `WEB_INF/lib` folder.
 
 ### Initialize
 
@@ -69,7 +71,7 @@ TODO
 
 ## License
 
-** "THE BEER-WARE LICENSE" (Revision 42): ** <br>
+ "THE BEER-WARE LICENSE" (Revision 42): <br>
 <br>
  &lt;gerviba@gerviba.hu&gt; wrote this file. As long as you retain this notice you <br>
 can do whatever you want with this stuff. If we meet some day, and you think <br>

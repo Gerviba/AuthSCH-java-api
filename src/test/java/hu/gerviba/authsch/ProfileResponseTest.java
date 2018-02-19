@@ -1,3 +1,12 @@
+/**
+ * 
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * 
+ *  <gerviba@gerviba.hu> wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return.       Szabó Gergely
+ * 
+ */
 package hu.gerviba.authsch;
 
 import static org.junit.Assert.assertEquals;
@@ -55,10 +64,10 @@ public class ProfileResponseTest {
         assertEquals("KB", profile.getEntrants().get(0).getEntrantType());
         
         assertEquals(Arrays.asList("BMEGT42A001", "BMEGT52A001", "BMEGT70BS2B"), profile.getCourses());
-        assertEquals(Arrays.asList("junit@sch.hu", "juint@balu.sch.bme.hu", "LinuxTerminal", "CERTSVC_DCOM_ACCESS", "Users"), 
-                profile.getADMemberships());
-        assertEquals(Arrays.asList(BMEUnitScope.BME, BMEUnitScope.BME_ACTIVE, BMEUnitScope.BME_VIK, BMEUnitScope.BME_VIK_ACTIVE), 
-                profile.getBmeUnitScopes());
+        assertEquals(Arrays.asList("junit@sch.hu", "juint@balu.sch.bme.hu", "LinuxTerminal", 
+                "CERTSVC_DCOM_ACCESS", "Users"), profile.getADMemberships());
+        assertEquals(Arrays.asList(BMEUnitScope.BME, BMEUnitScope.BME_ACTIVE, BMEUnitScope.BME_VIK, 
+                BMEUnitScope.BME_VIK_ACTIVE), profile.getBmeUnitScopes());
     }
     
     @Test

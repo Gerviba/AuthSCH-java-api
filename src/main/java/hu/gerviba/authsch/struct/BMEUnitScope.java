@@ -9,6 +9,9 @@
  */
 package hu.gerviba.authsch.struct;
 
+/**
+ * @author Gerviba
+ */
 public enum BMEUnitScope {
     BME(true, false, false, false),
     BME_VIK(true, true, false, false),

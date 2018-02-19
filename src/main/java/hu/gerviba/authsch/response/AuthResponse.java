@@ -14,6 +14,9 @@ import java.util.List;
 
 import hu.gerviba.authsch.struct.Scope;
 
+/**
+ * @author Gerviba
+ */
 public final class AuthResponse implements Serializable {
 
     private static final long serialVersionUID = 4140354200501250401L;

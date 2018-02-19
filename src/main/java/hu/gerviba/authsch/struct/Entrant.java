@@ -11,6 +11,9 @@ package hu.gerviba.authsch.struct;
 
 import java.io.Serializable;
 
+/**
+ * @author Gerviba
+ */
 public class Entrant implements Serializable {
 
     private static final long serialVersionUID = 461763126385555164L;
