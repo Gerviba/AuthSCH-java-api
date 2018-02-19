@@ -225,4 +225,14 @@ public final class ProfileDataResponse implements Serializable {
         return bmeunitscope;
     }
 
+    @Override
+    public String toString() {
+        return "ProfileDataResponse [internalId=" + internalId + ", displayName=" + displayName 
+                + ", surname=" + surname + ", givenName=" + givenName + ", mail=" + mail + ", neptun=" 
+                + neptun + ", linkedAccounts=" + linkedAccounts + ", eduPersonEntitlement=" 
+                + eduPersonEntitlement + ", roomNumber=" + roomNumber + ", mobile=" + mobile 
+                + ", courses=" + courses + ", entrants=" + entrants + ", admembership="
+                + admembership + ", bmeunitscope=" + bmeunitscope + "]";
+    }
+    
 }

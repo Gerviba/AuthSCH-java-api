@@ -61,4 +61,10 @@ public class PersonEntitlement implements Serializable {
         return end;
     }
 
+    @Override
+    public String toString() {
+        return "PersonEntitlement [id=" + id + ", name=" + name + ", status=" + status + ", start=" + start + ", end="
+                + end + "]";
+    }
+
 }

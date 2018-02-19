@@ -65,5 +65,11 @@ public final class AuthResponse implements Serializable {
     public String getRefreshToken() {
         return refreshToken;
     }
+
+    @Override
+    public String toString() {
+        return "AuthResponse [accessToken=" + accessToken + ", expiresIn=" + expiresIn + ", tokenType=" + tokenType
+                + ", scopes=" + scopes + ", refreshToken=" + refreshToken + "]";
+    }
     
 }

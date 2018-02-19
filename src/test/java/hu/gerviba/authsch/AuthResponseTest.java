@@ -19,7 +19,7 @@ import hu.gerviba.authsch.response.AuthResponse;
 import hu.gerviba.authsch.struct.Scope;
 
 public class AuthResponseTest {
-
+    
     @Test
     public void testMapperAuth() throws Exception {
         AuthSchAPI api = new AuthSchAPI();

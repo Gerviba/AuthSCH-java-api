@@ -40,4 +40,9 @@ public class Entrant implements Serializable {
         return entrantType;
     }
 
+    @Override
+    public String toString() {
+        return "Entrant [groupId=" + groupId + ", groupName=" + groupName + ", entrantType=" + entrantType + "]";
+    }
+
 }

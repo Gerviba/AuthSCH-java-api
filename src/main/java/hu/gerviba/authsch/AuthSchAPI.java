@@ -26,7 +26,6 @@ import javax.net.ssl.HttpsURLConnection;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import hu.gerviba.authsch.response.AuthResponse;
 import hu.gerviba.authsch.response.ProfileDataResponse;
@@ -173,6 +172,7 @@ public class AuthSchAPI implements Serializable {
     
     private ProfileDataResponse httpGet(String service, String accessToken) {
         URL obj = newUrl(apiUrlBase + "/" + service + "/?access_token=" + accessToken);
+        System.out.println(apiUrlBase + "/" + service + "/?access_token=" + accessToken);
         HttpsURLConnection con = newGetConnection(obj);
         setGetHeaders(con);
         processResponseCode(con);
@@ -184,7 +184,6 @@ public class AuthSchAPI implements Serializable {
         HttpsURLConnection con;
         try {
             con = (HttpsURLConnection) obj.openConnection();
-            con.setRequestMethod("POST");
         } catch (IOException e) {
             throw new AuthSchResponseException("Failed to open connection", e);
         }
@@ -194,10 +193,6 @@ public class AuthSchAPI implements Serializable {
     private void setGetHeaders(HttpsURLConnection con) {
         con.setRequestProperty("User-Agent", System.getProperty("authsch.useragent", "AuthSchJavaAPI"));
         con.setRequestProperty("Accept", "application/json");
-        con.setRequestProperty("Authorization", "Basic " + Base64.getEncoder()
-                .encodeToString((clientIdentifier + ":" + clientKey).getBytes()));
-        
-        con.setDoOutput(true);
     }
     
     @SuppressWarnings("deprecation")
@@ -337,7 +332,6 @@ public class AuthSchAPI implements Serializable {
         
         con.setDoOutput(true);
     }
-    
 
     private void writePostParameters(String parameters, HttpsURLConnection con) {
         try (DataOutputStream wr = new DataOutputStream(con.getOutputStream())) {
