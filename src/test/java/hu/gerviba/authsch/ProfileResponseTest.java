@@ -40,7 +40,6 @@ public class ProfileResponseTest {
                 + "\"CERTSVC_DCOM_ACCESS\",\"Users\"],"
                 + "\"bmeunitscope\":[\"BME\",\"BME_ACTIVE\",\"BME_VIK\",\"BME_VIK_ACTIVE\"]}");
         
-        System.out.println(profile);
         assertEquals("00000000-592c-6864-8dd9-000000000000", profile.getInternalId().toString());
         assertEquals("JUnit Bela", profile.getDisplayName());
         assertEquals("JUnit", profile.getSurname());

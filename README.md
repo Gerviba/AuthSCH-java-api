@@ -63,15 +63,15 @@ pom.xml
 
 ```XML
 
-    <properties>
+	<properties>
 		<authsch.version>1.0.2</authsch.version>
-    </properties>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>2.9.5</version>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.5</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
