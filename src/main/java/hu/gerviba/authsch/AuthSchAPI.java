@@ -179,7 +179,6 @@ public class AuthSchAPI implements Serializable {
 
     private ProfileDataResponse httpGet(String service, String accessToken) {
         URL obj = newUrl(apiUrlBase + "/" + service + "/?access_token=" + accessToken);
-        System.out.println(apiUrlBase + "/" + service + "/?access_token=" + accessToken);
         HttpsURLConnection con = newGetConnection(obj);
         setGetHeaders(con);
         processResponseCode(con);
