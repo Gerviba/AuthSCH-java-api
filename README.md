@@ -2,7 +2,7 @@ AuthSch Java API
 ===
 
 ![Coverage: 80.3%](https://img.shields.io/badge/coverage-80.3%25-green.svg)
-![Version: 1.0.1](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version: 1.0.2](https://img.shields.io/badge/version-1.0.2-blue.svg)
 ![BEER-WARE](https://img.shields.io/badge/license-BEER--WARE-yellow.svg)
 
 ## Usage
@@ -11,10 +11,10 @@ AuthSch Java API
 
 - You need to have an auth.sch account.
 - Register a new application.
-- Include the api to your project
-- Note that this project is depends on gson 2.6.2 library.
+- Include the api to your project.
+- Make sure your project has the `jackson-core` and the `jackson-databind` dependency.
 
-If you're using a web container, you might need to put a [gson-2.6.2.jar](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/) into the `WEB-INF/lib` folder.
+Spring boot applications will automatically include the jackson dependencies.
 
 ### Initialize
 
@@ -64,33 +64,38 @@ pom.xml
 ```XML
 
     <properties>
-        <authsch.version>1.0.1</authsch.version>
+		<authsch.version>1.0.2</authsch.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>hu.sch</groupId>
-            <artifactId>authsch</artifactId>
-            <version>${authsch.version}</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/authsch-${authsch.version}.jar</systemPath>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>hu.sch</groupId>
+			<artifactId>authsch</artifactId>
+			<version>${authsch.version}</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/authsch-${authsch.version}.jar</systemPath>
+		</dependency>
+	</dependencies>
 ```
 
-You need to put the `authsch-x.x.x.jar` (and maybe the `gson-2.6.2.jat`) into the `WEB-INF/lib` folder.
+You might need to put the `authsch-x.x.x.jar` into the `WEB-INF/lib` folder.
 
 
 ## List of projects
 
 - beugro.sch (Not released)
 
-> Submit your of if you have.
+> Submit your if you have.
 
 ## License
 
